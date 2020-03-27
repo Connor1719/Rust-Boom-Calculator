@@ -1,0 +1,76 @@
+func ask(_ prompt: String) -> String {
+  print(prompt, terminator:  "?")
+  return readLine()! 
+}
+
+let question = ask("What are you trying to make rockets, c4, satchels")
+
+if question == "rocket" || question == "rockets" || question == "Rockets" {
+  let rocketQ = ask("Rocket or Sulfur calculation")
+  if rocketQ == "ROCKETS" || rocketQ == "ROCKET" || rocketQ == "rockets" || rocketQ == "rocket" {
+    let rocketA = ask("How many rockets are you trying to make")
+    let rocketA2 = Int(rocketA) ?? 0
+    let charcoalA = rocketA2 * 1950
+    let sulfurA = rocketA2 * 1400
+    let lowgA = rocketA2 * 3
+    let metalA = rocketA2 * 10
+    let pipeA = rocketA2 * 2
+    let rocketGP = rocketA2 * 150
+    let totalGP = rocketA2 * 650
+    let explosives = rocketA2 * 10
+    let sulfurExpo = rocketA2 * 100
+    print("To make \(rocketA2) you will need \(sulfurA) sulfur, \(charcoalA) charcoal saving \(sulfurExpo) sulfur for explosives. You will also need \(totalGP) gun powder saving \(rocketGP) gun powder for rockets and then you need \(lowgA) low grade, \(metalA) metal frags, \(pipeA) pipes and \(explosives) explosives crafted. ")
+  } else {
+      let sulfurQ = ask("How much sulfur you got")
+      let sulfurQ2 = Double(sulfurQ) ?? 0.0
+      let sulfur = sulfurQ2 / 1400.0
+      let charcoal = sulfurQ2 / 2
+      let charcoalA = charcoal * 3
+      print("You can get \(sulfur) rockets with \(sulfurQ2) sulfur needing \(charcoalA) charcoal")
+  }
+}
+if question == "c4" || question == "C4" {
+  let questionC4 = ask("C4 or sulfur calculation")
+    if questionC4 == "sulfur" || questionC4 == "Sulfur" {
+      let sulfurA = ask("How much sulfur you got")
+      let sulfurAA = Double(sulfurA) ?? 0.0
+      let c4A = sulfurAA / 2200
+      let char = sulfurAA / 2
+      let chatA = char * 3
+      print("You can make \(c4A) C4 with \(sulfurAA) needing \(chatA) charcoal.")
+    } else {
+        let c4Craf = ask("How much c4 you tryna craft")
+        let c4Craft = Int(c4Craf) ?? 0
+        let xpA = c4Craft * 20
+        let gpA = c4Craft * 1000
+        let techT = c4Craft * 3
+        let sulfurTotal = c4Craft * 2200
+        let sulfurXP = c4Craft * 200
+        let fragsA = c4Craft * 200
+        let lowG = c4Craft * 60
+        let charcoal = c4Craft * 3000
+        print("To craft \(c4Craft) C4 you need a total of \(sulfurTotal) sulfur, \(charcoal) charcoal. Using \(sulfurXP) for explosives \(xpA) explosives also \(gpA) and components \(techT) tech trash \(fragsA) metalfrags \(lowG) low grade")
+    }
+}
+
+if question == "satchel" || question == "satchels" || question == "Satchels" {
+  let satchelQ = ask("Satchel or sulfur amount")
+  if satchelQ == "sulfur" || satchelQ == "Sulfur" {
+    let satcheA = ask("How much sulfur ya got")
+    let satchelA = Double(satcheA) ?? 0.0
+    let satA = satchelA / 480
+    let char1 = 480 / 2
+    let char2 = char1 * 3
+    print("With \(satchelA) sulfur you can make \(satA) satchels needing \(char2) charcoal")
+  } else {
+      let satchA = ask("How many satchel are you trying to make")
+      let satcheA = Int(satchA) ?? 0
+      let cloth = satcheA * 10
+      let stash = satcheA * 1
+      let rope = satcheA * 1
+      let charchar = satcheA * 740
+      let sulfsulf = satcheA * 480
+      let beancan = satcheA * 4
+      print("To make \(satcheA) satchels you will need \(sulfsulf) sulfur \(charchar) charcoal \(cloth) cloths \(stash) small stash \(rope) ropes \(beancan) beancanss")
+  }
+}
